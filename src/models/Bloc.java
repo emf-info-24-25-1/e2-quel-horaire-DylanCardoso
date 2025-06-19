@@ -7,9 +7,11 @@ import java.util.Locale;
 public class Bloc {
     public static final int NBRE_DE_DEMIS_JOURS_SEMAINE = 10;
 
+    //MR Les deux attributs auraient pu être final
     private String nom;
     private ModuleInfo[] modules;
     
+    //MR La signature de la méthode Bloc n'est pas précisé comme ceci
     public Bloc(String nom, ModuleInfo[] modules) {
         this.nom = nom;
 
@@ -23,6 +25,7 @@ public class Bloc {
         this.modules = modules;
     }
 
+    //MR Ta méthode est juste, mais si il n'y a pas assez de place, il planifie tout de même les premiers modules
     public boolean planifierModule(ModuleInfo module) {
         int nbreDeDemiJourTrouvee = 0;
         for (int i = 0; i < modules.length; i++) {
@@ -46,6 +49,7 @@ public class Bloc {
                     System.out.println(DayOfWeek.values()[jour].getDisplayName(TextStyle.FULL, Locale.FRANCE));
                     jour++;
                 }
+                //MR Ici le module doit afficher le toString pour afficher également le professeur
                 System.out.println("    matin : " + modules[compteur].getNom());
                 compteur++;
                 System.out.println("    après-midi : " + modules[compteur].getNom());
@@ -85,6 +89,7 @@ public class Bloc {
 
     @Override
     public String toString() {
+        //MR Retourne simplement le nom du bloc
         return "Bloc []";
     }
 }

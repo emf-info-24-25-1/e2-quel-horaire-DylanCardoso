@@ -1,6 +1,7 @@
 package models;
 
 public class Professeur {
+    //MR Manque les finals sur les deux premiers attributs
     private String nom;
     private String prenom;
     private ModuleInfo[] modulesEnseignes;
@@ -16,6 +17,7 @@ public class Professeur {
         for (int i = 0; i < modulesEnseignes.length; i++) {
             if (modulesEnseignes[i].getNom() == nomDuModule)
                 aEnseigneeCeModule = true;
+                //MR un petit break ici
         }
         return aEnseigneeCeModule;
     }
@@ -50,6 +52,7 @@ public class Professeur {
 
     @Override
     public String toString() {
+        //MR Ne correspond pas à la consigne Doit retourner le prénom suivi d'un espace et du nom de famille en majuscules.
         return "Professeur : " + nom;
     }
 }

@@ -43,6 +43,7 @@ public class App {
             System.out.println("Probleme de planification...");
         }
 
+        // MR Cette méthode devait être dans le if avec succès.
         horaire.afficherHoraire();
     }
 }

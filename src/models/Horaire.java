@@ -17,6 +17,7 @@ public class Horaire {
     }
 
     public boolean planifier(ModuleInfo[] modules, Professeur[] profs) {
+            //MR Tu aurais dû faire en deux étapes setProfesseur, puis ensuite planifierModule dans une autre (pas de boucle imbriquée)    
         boolean aReussiAPlanifier = false;
         for (int i = 0; i < modules.length; i++) {
             for (int j = 0; j < profs.length; j++) {
